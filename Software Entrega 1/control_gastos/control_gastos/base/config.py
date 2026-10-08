@@ -2,7 +2,7 @@
 from pathlib import Path
 
 # Conexión a la base de datos SQLite (archivo gastos.db).
-DB_URL = "sqlite:///gastos.db"
+DB_URL = f"sqlite:///{(Path(__file__).parent.parent / 'gastos.db').as_posix()}"
 
 # Ruta del archivo de documentación HTML (vive junto a este archivo).
 RUTA_DOCUMENTACION = Path(__file__).parent.parent / "documentacion.html"
